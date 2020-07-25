@@ -8,12 +8,12 @@ Home-made NAS with Arch, Btrfs raid 5 and shucked drives. The ~~bottom of the oc
 
 Summary: 4 cores, 8GB DDR4, 24TB storage, 1GB/s Ethernet, ~15W idle/~45W full load (projected, not measured).
 
-- [ASRock J4105-ITX ](https://www.asrock.com/MB/Intel/J4105-ITX/index.asp) / [CPU](https://ark.intel.com/content/www/us/en/ark/products/128989/intel-celeron-j4105-processor-4m-cache-up-to-2-50-ghz.html) 95e
+- [ASRock J4105-ITX](https://www.asrock.com/MB/Intel/J4105-ITX/index.asp) / [CPU](https://ark.intel.com/content/www/us/en/ark/products/128989/intel-celeron-j4105-processor-4m-cache-up-to-2-50-ghz.html) 95e
 - [Crucial 4GBx2 DDR4 2400 MT/s SODIMM CT2K4G4SFS824A](https://www.crucial.com/usa/en/ct2k4g4sfs824a) 20e
 - [WD Elements 8TBx3 EMAZ WDBWLG0080HBK-NESN](https://shop.westerndigital.com/products/external-drives/wd-elements-desktop-usb-3-0-hdd#WDBWLG0080HBK-NESN) 465e (3x155e)
 - [Cooler Master Elite 110](https://www.coolermaster.com/catalog/cases/mini-itx/elite110/) 45e
 - [Antec 550VP](https://www.techpowerup.com/review/antec-vp550p/single-page.html) reused (TODO: replace)
-- [OCZ Vertex 2 40GB](https://www.techspot.com/review/313-budget-ssd-roundup/page6.html) reused (TODO: replace)
+- [PNY CS900 120GB](https://www.pny.com/SSD-CS900?sku=SSD7CS900-120-RB) reused
 - 4x SATA cable (reused)
 - 1x short ethernet cable (reused)
 
@@ -21,13 +21,14 @@ Total cost (for now): 625€ / $685
 
 ## System
 
-- Arch current (Kernel 5.5.2-arch1-1 at time of install)
+- Arch current (kernel was 5.5.2-arch1-1 at time of install)
 - EXT4 system drive (`/ /boot /home /var`)
 - Btrfs raid5 ~16TB available (`mkfs.btrfs --label nasse --data raid5 --metadata raid1 --checksum xxhash /dev/sd[bcd]`)
 
 Losing one disk is fine but will lead to downtime as the disks are all from the same day/same factory.
 
 More on Btrfs:
+
 - https://btrfs.wiki.kernel.org/index.php/Main_Page
 - https://wiki.archlinux.org/index.php/Btrfs
 - https://wiki.debian.org/Btrfs
